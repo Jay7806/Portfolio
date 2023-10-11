@@ -10,7 +10,7 @@ window.addEventListener("load", function () {
   gradient.addColorStop(0.5, "red");
   gradient.addColorStop(1, "blue");
   ctx.fillStyle = gradient;
-  ctx.strokeStyle = "white";
+  ctx.strokeStyle = "yellow";
 
   class Particle {
     constructor(effect) {
@@ -21,7 +21,7 @@ window.addEventListener("load", function () {
       this.y = -Math.random() * this.effect.height * 0.5;
       this.vx = Math.random() * 2 - 1;
       this.vy = 0;
-      this.gravity = this.radius * 0.01;
+      this.gravity = this.radius * 0.001;
       this.friction = 0.95;
       this.width = this.radius * 2;
       this.height = this.radius * 2;
@@ -96,8 +96,8 @@ window.addEventListener("load", function () {
         height: this.element.height,
       };
       this.particles = [];
-      this.numberOfParticles = 150;
-      this.maxDistance = 0;
+      this.numberOfParticles = 200;
+      this.maxDistance = 60;
       this.createParticles();
 
       this.mouse = {
@@ -198,7 +198,7 @@ window.addEventListener("load", function () {
 
   function animate() {
     //ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.fillStyle = "rgba(0,0,0,0.05)";
+    ctx.fillStyle = "rgba(0,0,0,0.06)";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     effect.handleParticles(ctx);
     requestAnimationFrame(animate);

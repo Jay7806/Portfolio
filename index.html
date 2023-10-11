@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>JamesSmith</title>
     <script src="./index.js" defer></script>
-        <script src="./particles.js" defer></script>
+    <script src="./particles.js" defer></script>
   </head>
   <body>
     <canvas id="canvas1"></canvas>
@@ -17,87 +23,154 @@
           <h1 id="HeaderHome" class="HeaderHome">James Smith</h1>
           <h2 class="SubHeaderHome">Junior Software Developer</h2>
           <button
-            onclick="scrollToElement('#link2')"
+            onclick="scrollToElement('#Projects')"
             class="button"
             role="button"
           >
             Click to see more
           </button>
-                  </div>
+        </div>
       </section>
-      <div class="Container">
-        <nav id="main-nav">
-          <ul class="nav-links">
-            <li id="link1" class="link"><a href="#">Home</a></li>
-            <li id="link2" class="link"><a href="#">Projects</a></li>
-            <li id="link3" class="link"><a href="#">About</a></li>
-            <li id="link4" class="link"><a href="#">Contact</a></li>
-          </ul>
-        </nav>
+      <div class="ProjectsContainer">
+        <div class="Container">
+          <section class="ProjectsSection">
 
-        <section class="ProjectsSection">
-          <h1 class="Projects">Projects</h1>
-          <div class="NC-NEWS">
-          <h2 class="text">NC-News</h2>
-          <p class="text">My NC-News project is a full-stack news app I built as my solo project at Northcoders. This was originally two seperate projects, a back-end API and a front-end web-app and then joined together to create the NC-News website. It has comment, like, delete and post functionality as well as being able to sort articles and sign in as an existing user. </p>
-          <h3 class="text">Tech Stack:</h3>
-          <ol>
-            <li class="text">JavaScript</li>
-            <li class="text">React</li>
-            <li class="text">PostgreSQL</li>
-            <li class="text">Node.js</li>
-            <li class="text">Express.js</li>
-            <li class="text">Jest</li>
-          </ol>
-          <a class="text">Back-end repo</a>
-          <a class="text">Front-end repo</a>
-          <a class="text">Hosted site</a>
-          </div>
-          <div class="Picture-this-place">
-          <h2 class="text">Picture This Place</h2>
-          <p class="text">This is a Full-stack group project. This App is a location based guessing game were a user will go out, take a picture of a building or monument and then post on the app and then another user will look on the app at near-by posted places and go and find the location of the picture, once they're at the location they can make and guess and based on the co-ordinates of the guess the app will give them a medal depening on how close to the location they are. if they're within 25m of the location they will recieve a gold medal, withing 50M will recieve silver and within 75m will recieve bronze. </p>
-          <h3 class="text">Tech Stack:</h3>
-          <ol>
-            <li class="text">JavaScript</li>
-            <li class="text">React Native</li>
-            <li class="text">Expo/ExpoGo</li>
-            <li class="text">MongoDB</li>
-            <li class="text">Mongoose</li>
-            <li class="text">Node.js</li>
-            <li class="text">Express.js</li>
-            <li class="text">Jest</li>
-          </ol>
-          <a class="text">Back-end repo</a>
-          <a class="text">Front-end repo</a>
-          </div>
-          <div class="NC-NEWS">
-          <h2 class="text">Portfolio Website</h2>
-          <p class="text">This is my portfolio website...</p>
-          <h3 class="text">Tech Stack:</h3>
-          <ol>
-            <li class="text">JavaScript</li>
-            <li class="text">HTML</li>
-            <li class="text">CSS</li>
-          </ol>
-          <a class="text">GitHub</a>
-
-          </div>
-        </section>
-        <section class="AboutSection">
+            <!-- NAV -->
+            <nav id="main-nav">
+              <ul class="nav-links">
+                <li id="link1" class="link"><a href="">Home</a></li>
+                <li id="link2" class="link">
+                  <a href="#Projects">Projects</a>
+                </li>
+                <li id="link3" class="link"><a href="#About">About</a></li>
+                <li id="link4" class="link"><a href="#Contact">Contact</a></li>
+              </ul>
+            </nav>
+            <!-- NAV -->
+            
+            <h1 id="Projects" class="Projects">Projects</h1>
+            <div class="NC-NEWS">
+              <h2 class="text">NC-News</h2>
+              <p class="text-project">
+                My NC-News project is a full-stack news app I built as my solo
+                project at Northcoders. This was originally two seperate
+                projects, a back-end API and a front-end web-app and then joined
+                together to create the NC-News website. It has comment, like,
+                delete and post functionality as well as being able to sort
+                articles and sign in as an existing user.
+              </p>
+              <h3 class="text">Tech Stack:</h3>
+              <ol class="tech-stack">
+                <li class="text">JavaScript</li>
+                <li class="text">React</li>
+                <li class="text">PostgreSQL</li>
+                <li class="text">Node.js</li>
+                <li class="text">Express.js</li>
+                <li class="text">Jest</li>
+              </ol>
+              <div class="buttons">
+                <a
+                  href="https://github.com/Jay7806/js-be-project"
+                  target="_blank"
+                  class="button"
+                >
+                  <i class="fa-brands fa-github"></i> Back-end GitHub
+                </a>
+                <a
+                  href="https://github.com/Jay7806/js-fe-project"
+                  target="_blank"
+                  class="button"
+                >
+                  <i class="fa-brands fa-github"></i> Front-end GitHub
+                </a>
+              </div>
+            </div>
+            <div class="Picture-this-place">
+              <h2 class="text">Picture This Place</h2>
+              <p class="text-project">
+                This is a Full-stack group project. This App is a location based
+                guessing game were a user will go out, take a picture of a
+                building or monument and then post on the app and then another
+                user will look on the app at near-by posted places and go and
+                find the location of the picture, once they're at the location
+                they can make and guess and based on the co-ordinates of the
+                guess the app will give them a medal depening on how close to
+                the location they are. if they're within 25m of the location
+                they will recieve a gold medal, withing 50M will recieve silver
+                and within 75m will recieve bronze.
+              </p>
+              <h3 class="text">Tech Stack:</h3>
+              <ol class="tech-stack">
+                <li class="text">JavaScript</li>
+                <li class="text">React Native</li>
+                <li class="text">Expo/ExpoGo</li>
+                <li class="text">MongoDB</li>
+                <li class="text">Mongoose</li>
+                <li class="text">Node.js</li>
+                <li class="text">Express.js</li>
+                <li class="text">Jest</li>
+              </ol>
+              <div class="buttons">
+                <a
+                  href="https://github.com/jcainuk/group-5-backend"
+                  target="_blank"
+                  class="button"
+                >
+                  <i class="fa-brands fa-github"></i> Back-end GitHub
+                </a>
+                <a
+                  href="https://github.com/Harrywg/group-5-frontend"
+                  target="_blank"
+                  class="button"
+                >
+                  <i class="fa-brands fa-github"></i> Front-end GitHub
+                </a>
+              </div>
+            </div>
+            <div class="Portfolio-Website">
+              <h2 class="text">Portfolio Website</h2>
+              <p class="text-project">This is my portfolio website...</p>
+              <h3 class="text">Tech Stack:</h3>
+              <ol class="tech-stack">
+                <li class="text">JavaScript</li>
+                <li class="text">HTML</li>
+                <li class="text">CSS</li>
+              </ol>
+              <div class="buttons">
+                <a
+                  href="https://github.com/Jay7806/Portfolio"
+                  target="_blank"
+                  class="button"
+                >
+                  <i class="fa-brands fa-github"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+        </div>
+        <section id="About" class="AboutSection">
           <h1 class="About">About</h1>
+          <p class="intro">Hi, I'm James, A Junior Software Developer looking for my first job in tech.</p>
+          <img class="image" src="./js.jpg"/>
+          <p class="lang">languages: JavaScript, HTML, CSS, React Native, React, Expo/ExpoGo, Node.js, Express.js, PostgreSQL, Jest, </p>
           <div class="buttons">
-                        <a href="https://github.com/Jay7806" target="_blank">
-              <button class="gitHub" href=""><i class="fa-brands fa-github"></i></i></button>
+            <a href="https://github.com/Jay7806" target="_blank">
+              <button class="gitHub" href="">
+                <i class="fa-brands fa-github"></i>
+              </button>
             </a>
             <a
               href="https://www.linkedin.com/in/james-smith-269850148"
               target="_blank"
             >
-              <button class="linkedin"><i class="fa-brands fa-linkedin"></i></button>
+              <button class="linkedin">
+                <i class="fa-brands fa-linkedin"></i>
+              </button>
             </a>
           </div>
         </section>
-        <section class="ContactSection">
+        <section id="Contact" class="ContactSection">
           <h1 class="Contact">Contact</h1>
         </section>
       </div>

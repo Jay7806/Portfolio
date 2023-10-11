@@ -20,16 +20,13 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  
 }
 .HeaderHome {
   font-family: Poppins;
   color: white;
   text-align: center;
   font-size: 60px;
-    border-top: 5px solid white;
-
-  
+  border-top: 5px solid white;
 }
 .SubHeaderHome {
   font-family: Poppins;
@@ -38,12 +35,18 @@ body {
   font-size: 40px;
 }
 #main-nav {
-  max-width: 1200px;
-  margin: auto;
+  background-color: #1e1e1e;
   padding: 10px;
+  padding-left: 20rem;
+  text-align: center;
+  justify-content: center;
+  width: 100%;
   position: relative;
   box-sizing: border-box;
-  top: 10px;
+  height: 45px;
+  top: 61rem;
+  border-bottom: solid #368db2;
+  border-width: 5px;
 }
 nav a.active {
   color: #1e1e1e;
@@ -78,41 +81,90 @@ nav a.active {
 #main-nav.sticky {
   position: fixed;
   top: 0;
+  z-index: 1000;
 }
 .navbarOffsetMargin {
   padding-top: 45px;
 }
-.projectsSection {
-  padding-top: 20px;
+
+.ProjectsSection {
+  background-color: rgb(51, 88, 123);
+  padding-bottom: 2px;
+    }
+.NC-NEWS, .Picture-this-place, .Portfolio-Website {
+  flex: 0 0 calc(33.33% - 20px);
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  font-size: 14px;
+  border: solid #368db2;
+  background-color: lightgray;
 }
-.Projects {
-  margin-top: 62rem;
+ .Projects {
+  text-align: center;
+  margin-top: 58rem;
+  margin-left: 150px;
   padding-top: 5rem;
   font-family: Poppins;
   font-size: 50px;
-  color: white;
+  color: black;
+  border-bottom: solid 5px rgb(36, 148, 208);
+  border-width: 5px;
+  width: 240px;
+}
+.tech-stack {
+  margin-left: 10px;
+  padding-left: 8px;
 }
 .text {
-  color: white;
+  color: black;
+  font-family: Poppins;
+}
+.text-project {
+  color: black;
+  font-family: Poppins;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.AboutSection{
+  font-family: Poppins;
+    height: 60rem;
+  font-size: 50px;
+    background-color: white;
+  color: black;
+  border-bottom: solid 5px rgb(36, 148, 208);
 }
 .About {
+    margin-left: 150px;
+    text-align: center;
   font-family: Poppins;
   font-size: 50px;
-  color: white;
-  margin-top: 10rem;
-  margin-bottom: 50rem;
+    background-color: white;
+  color: black;
+  border-bottom: solid 5px rgb(36, 148, 208);
+  border-width: 5px;
+  width: 240px;
+}
+.intro{
+  font-size: 20px;
+}
+.image{
+  width:200px;
+  height:200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.lang{
+  font-size: 20px;
+
 }
 .Contact {
   font-family: Poppins;
   font-size: 50px;
   color: white;
-  margin-bottom: 50rem;
-}
-.buttons {
-  display: flex;
-  justify-content: center;
-  position: relative;
-  top: -8rem;
+  margin-bottom: 54rem;
 }
 .button {
   margin-top: 3rem;
