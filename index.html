@@ -24,7 +24,7 @@
           <h2 class="SubHeaderHome">Junior Software Developer</h2>
           <button
             onclick="scrollToElement('#Projects')"
-            class="button"
+            class="button homepage-button"
             role="button"
           >
             Click to see more
@@ -149,29 +149,58 @@
           </section>
         </div>
         </div>
+        <div class="aboutContainer">
         <section id="About" class="AboutSection">
           <h1 class="About">About</h1>
-          <p class="intro">Hi, I'm James, A Junior Software Developer looking for my first job in tech.</p>
+          <p class="intro">Hi, I'm James Smith. I started to code by teaching myself in my spare time, which led me to embark on a career change from working as a telecommunications engineer to an aspiring Software Developer, I took the leap by enrolling in the Northcoders Software Development bootcamp. In this transformative journey, I honed my skills, learned to tackle complex challenges, and embraced a growth mindset. Now, I'm ready to contribute to the dynamic world of software development, armed with a passion for innovation and a commitment to pushing the boundaries of technology.</p>
           <img class="image" src="./js.jpg"/>
-          <p class="lang">languages: JavaScript, HTML, CSS, React Native, React, Expo/ExpoGo, Node.js, Express.js, PostgreSQL, Jest, </p>
-          <div class="buttons">
-            <a href="https://github.com/Jay7806" target="_blank">
-              <button class="gitHub" href="">
-                <i class="fa-brands fa-github"></i>
-              </button>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/james-smith-269850148"
-              target="_blank"
-            >
-              <button class="linkedin">
-                <i class="fa-brands fa-linkedin"></i>
-              </button>
-            </a>
-          </div>
-        </section>
+            <ul class="tech">
+            <a class="lang">JavaScript</a>
+            <a class="lang">HTML</a>
+            <a class="lang">CSS</a>
+            <a class="lang">React</a>
+            <a class="lang">React Native</a>
+            <a class="lang">Expo/ ExpoGo</a>
+            <a class="lang">Node.js</a>
+            <a class="lang">Express.js</a>
+            <a class="lang">PostgreSQL</a>
+            <a class="lang">Jest</a>
+          </ul>
+         
+                  </section>
+        </div>
+        <!-- ---------Contact------- -->
         <section id="Contact" class="ContactSection">
-          <h1 class="Contact">Contact</h1>
+          <div class="contact-container">
+            <div class="row">
+              <div class="contact-left">
+          <h1 class="Contact">Contact Me</h1>
+          <p><i class="fa-regular fa-paper-plane"></i>Email</p>
+          <p><i class="fa-solid fa-phone"></i>phone number</p>
+                 <div class="buttons-container">
+                <a
+                  href="https://github.com/Jay7806"
+                  target="_blank"
+                  class="fa-brands fa-github"
+                >
+                                </a>
+                <a
+                  href="https://www.linkedin.com/in/james-smith-269850148"
+                  target="_blank"
+                  class="fa-brands fa-linkedin"
+                >
+                                </a>
+              </div>
+          <a href="James Smith_CV.pdf" download class="button buttonCV">Download CV</a>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button class="button buttonCV" type="submit">Submit</button>
+
+            </form>
+          </div>
         </section>
       </div>
     </div>
