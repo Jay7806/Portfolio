@@ -166,17 +166,38 @@
             <a class="lang">PostgreSQL</a>
             <a class="lang">Jest</a>
           </ul>
-         
-                  </section>
+         </section>
         </div>
         <!-- ---------Contact------- -->
         <section id="Contact" class="ContactSection">
-          <div class="contact-container">
-            <div class="row">
-              <div class="contact-left">
           <h1 class="Contact">Contact Me</h1>
-          <p><i class="fa-regular fa-paper-plane"></i>Email</p>
-          <p><i class="fa-solid fa-phone"></i>phone number</p>
+            <form action="" class="contact-form" id="contact-form">
+              <input type="text" name="Name" placeholder="Your Name" class="name" required>
+                <input type="email" name="email" placeholder="Your Email" class="email" required>
+              <textarea name="Message" cols="30" rows="10" placeholder="Your Message" class="message"></textarea>
+            <input class="send-btn" type="submit" value="Send">Submit</input>
+          </form>
+        </section>
+
+        <!-- -- Email Js Link -- -->
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ @emailjs/browser@3/dist/email.min.js"></script>
+        <!-- -- Sweet Alert Js Link -- -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+        <script type="text/javascript">
+            (function() {
+            emailjs.init('k0h_8PYoavkFEQWJN');
+            })();
+        </script>
+
+      </div>
+    </div>
+  </body>
+</html>
+
+
+  <!-- <p><i class="fa-regular fa-paper-plane"></i>jay241093@gmail.com</p>
+          <p><i class="fa-solid fa-phone"></i>07496956755</p>
                  <div class="buttons-container">
                 <a
                   href="https://github.com/Jay7806"
@@ -191,18 +212,4 @@
                 >
                                 </a>
               </div>
-          <a href="James Smith_CV.pdf" download class="button buttonCV">Download CV</a>
-          <div class="contact-right">
-            <form>
-              <input type="text" name="Name" placeholder="Your Name" required>
-              <input type="email" name="email" placeholder="Your Email" required>
-              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-              <button class="button buttonCV" type="submit">Submit</button>
-
-            </form>
-          </div>
-        </section>
-      </div>
-    </div>
-  </body>
-</html>
+          <a href="James Smith_CV.pdf" download class="button buttonCV">Download CV</a> -->
