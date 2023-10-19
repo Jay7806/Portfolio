@@ -42,43 +42,67 @@ link4.addEventListener("click", (e) => {
   scrollToElement("#Contact");
 });
 
-function validate() {
-  let name = document.querySelector(".name");
-  let email = document.querySelector(".email");
-  let msg = document.querySelector(".message");
-  let sendBtn = document.querySelector(".send-btn");
+//Email
 
-  sendBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    if (name.value === "" || email.value === "" || msg.value === "") {
-      emptyError();
-    } else {
-      sendMail(name.value, email.value, msg.value);
-      success();
-    }
-  });
-}
-validate();
+function SendMail() {
+  (function () {
+    emailjs.init("k0h_8PYoavkFEQWJN");
+  })();
 
-function sendMail(name, email, msg) {
-  emailjs.send("service_z3ltfad", "template_0rxfb08", {
-    from_name: email,
-    to_name: name,
-    message: msg,
-  });
+  let params = {
+    from_name: document.querySelector("#fullName").value,
+    email_id: document.querySelector("#email_id").value,
+    message: document.querySelector("#message").value,
+  };
+
+  let serviceId = "service_z3ltfad";
+  let templateId = "template_s9rmxzp";
+
+  emailjs
+    .send(serviceId, templateId, params)
+    .then((res) => {
+      alert("email sent");
+    })
+    .catch();
 }
 
-function emptyError() {
-  swal({
-    title: "Error",
-    text: "Fields cannot be empty",
-    icon: "error",
-  });
-}
-function success() {
-  swal({
-    title: "success",
-    text: "Thank you for getting in touch!",
-    icon: "Success",
-  });
-}
+// function validate() {
+//   let name = document.querySelector(".name");
+//   let email = document.querySelector(".email");
+//   let msg = document.querySelector(".message");
+//   let sendBtn = document.querySelector(".send-btn");
+
+//   sendBtn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     if (name.value === "" || email.value === "" || msg.value === "") {
+//       emptyError();
+//     } else {
+//       sendMail(name.value, email.value, msg.value);
+//       success();
+//     }
+//   });
+// }
+// validate();
+
+// function sendMail(name, email, msg) {
+//   emailjs.send("service_z3ltfad", "template_0rxfb08", {
+//     from_name: email,
+//     to_name: name,
+//     message: msg,
+//   });
+// }
+
+// function emptyError() {
+//   swal({
+//     title: "Error",
+//     text: "Fields cannot be empty",
+//     icon: "error",
+//   });
+// }
+// function success() {
+//   swal({
+//     title: "Email sent successfully",
+//     text: "Thank you for getting in touch!",
+//     icon: "success",
+//   });
+// }

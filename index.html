@@ -14,27 +14,49 @@
     <title>JamesSmith</title>
     <script src="./index.js" defer></script>
     <script src="./particles.js" defer></script>
+    <!-- -- Email Js Link -- -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/ @emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <!-- -- Sweet Alert Js Link -- -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
     <canvas id="canvas1"></canvas>
-    <div>
+    <div class="website-container">
       <section id="Header" class="Header">
         <div>
           <h1 id="HeaderHome" class="HeaderHome">James Smith</h1>
           <h2 class="SubHeaderHome">Junior Software Developer</h2>
+          <div class="top-buttons">
+            <a
+              href="https://github.com/Jay7806"
+              target="_blank"
+              class="fa-brands fa-github"
+            >
+            </a>
+            <a
+              href="https://www.linkedin.com/in/james-smith-269850148"
+              target="_blank"
+              class="fa-brands fa-linkedin"
+            >
+            </a>
+          </div>
+          <div class="homepage-button-container">
           <button
             onclick="scrollToElement('#Projects')"
-            class="button homepage-button"
+            class="homepage-button"
             role="button"
           >
             Click to see more
           </button>
+          </div>
         </div>
       </section>
       <div class="ProjectsContainer">
         <div class="Container">
           <section class="ProjectsSection">
-
             <!-- NAV -->
             <nav id="main-nav">
               <ul class="nav-links">
@@ -47,7 +69,7 @@
               </ul>
             </nav>
             <!-- NAV -->
-            
+
             <h1 id="Projects" class="Projects">Projects</h1>
             <div class="NC-NEWS">
               <h2 class="text">NC-News</h2>
@@ -85,46 +107,48 @@
                 </a>
               </div>
             </div>
-            <div class="Picture-this-place">
-              <h2 class="text">Picture This Place</h2>
-              <p class="text-project">
-                This is a Full-stack group project. This App is a location based
-                guessing game were a user will go out, take a picture of a
-                building or monument and then post on the app and then another
-                user will look on the app at near-by posted places and go and
-                find the location of the picture, once they're at the location
-                they can make and guess and based on the co-ordinates of the
-                guess the app will give them a medal depening on how close to
-                the location they are. if they're within 25m of the location
-                they will recieve a gold medal, withing 50M will recieve silver
-                and within 75m will recieve bronze.
-              </p>
-              <h3 class="text">Tech Stack:</h3>
-              <ol class="tech-stack">
-                <li class="text">JavaScript</li>
-                <li class="text">React Native</li>
-                <li class="text">Expo/ExpoGo</li>
-                <li class="text">MongoDB</li>
-                <li class="text">Mongoose</li>
-                <li class="text">Node.js</li>
-                <li class="text">Express.js</li>
-                <li class="text">Jest</li>
-              </ol>
-              <div class="buttons">
-                <a
-                  href="https://github.com/jcainuk/group-5-backend"
-                  target="_blank"
-                  class="button"
-                >
-                  <i class="fa-brands fa-github"></i> Back-end GitHub
-                </a>
-                <a
-                  href="https://github.com/Harrywg/group-5-frontend"
-                  target="_blank"
-                  class="button"
-                >
-                  <i class="fa-brands fa-github"></i> Front-end GitHub
-                </a>
+            <div class="Picture-this-place-container">
+              <div class="Picture-this-place">
+                <h2 class="text">Picture This Place</h2>
+                <p class="text-project">
+                  This is a Full-stack group project. This App is a location
+                  based guessing game were a user will go out, take a picture of
+                  a building or monument and then post on the app and then
+                  another user will look on the app at near-by posted places and
+                  go and find the location of the picture, once they're at the
+                  location they can make and guess and based on the co-ordinates
+                  of the guess the app will give them a medal depening on how
+                  close to the location they are. if they're within 25m of the
+                  location they will recieve a gold medal, withing 50M will
+                  recieve silver and within 75m will recieve bronze.
+                </p>
+                <h3 class="text">Tech Stack:</h3>
+                <ol class="tech-stack">
+                  <li class="text">JavaScript</li>
+                  <li class="text">React Native</li>
+                  <li class="text">Expo/ExpoGo</li>
+                  <li class="text">MongoDB</li>
+                  <li class="text">Mongoose</li>
+                  <li class="text">Node.js</li>
+                  <li class="text">Express.js</li>
+                  <li class="text">Jest</li>
+                </ol>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/jcainuk/group-5-backend"
+                    target="_blank"
+                    class="button"
+                  >
+                    <i class="fa-brands fa-github"></i> Back-end GitHub
+                  </a>
+                  <a
+                    href="https://github.com/Harrywg/group-5-frontend"
+                    target="_blank"
+                    class="button"
+                  >
+                    <i class="fa-brands fa-github"></i> Front-end GitHub
+                  </a>
+                </div>
               </div>
             </div>
             <div class="Portfolio-Website">
@@ -148,13 +172,23 @@
             </div>
           </section>
         </div>
-        </div>
-        <div class="aboutContainer">
+      </div>
+      <div class="aboutContainer">
         <section id="About" class="AboutSection">
           <h1 class="About">About</h1>
-          <p class="intro">Hi, I'm James Smith. I started to code by teaching myself in my spare time, which led me to embark on a career change from working as a telecommunications engineer to an aspiring Software Developer, I took the leap by enrolling in the Northcoders Software Development bootcamp. In this transformative journey, I honed my skills, learned to tackle complex challenges, and embraced a growth mindset. Now, I'm ready to contribute to the dynamic world of software development, armed with a passion for innovation and a commitment to pushing the boundaries of technology.</p>
-          <img class="image" src="./js.jpg"/>
-            <ul class="tech">
+          <p class="intro">
+            Hi, I'm James Smith. I started to code by teaching myself in my
+            spare time, which led me to embark on a career change from working
+            as a telecommunications engineer to an aspiring Software Developer,
+            I took the leap by enrolling in the Northcoders Software Development
+            bootcamp. In this transformative journey, I honed my skills, learned
+            to tackle complex challenges, and embraced a growth mindset. Now,
+            I'm ready to contribute to the dynamic world of software
+            development, armed with a passion for innovation and a commitment to
+            pushing the boundaries of technology.
+          </p>
+          <img class="image" src="./js.jpg" />
+          <ul class="tech">
             <a class="lang">JavaScript</a>
             <a class="lang">HTML</a>
             <a class="lang">CSS</a>
@@ -166,50 +200,62 @@
             <a class="lang">PostgreSQL</a>
             <a class="lang">Jest</a>
           </ul>
-         </section>
-        </div>
-        <!-- ---------Contact------- -->
-        <section id="Contact" class="ContactSection">
-          <h1 class="Contact">Contact Me</h1>
-            <form action="" class="contact-form" id="contact-form">
-              <input type="text" name="Name" placeholder="Your Name" class="name" required>
-                <input type="email" name="email" placeholder="Your Email" class="email" required>
-              <textarea name="Message" cols="30" rows="10" placeholder="Your Message" class="message"></textarea>
-            <input class="send-btn" type="submit" value="Send">Submit</input>
-          </form>
         </section>
-
-        <!-- -- Email Js Link -- -->
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/ @emailjs/browser@3/dist/email.min.js"></script>
-        <!-- -- Sweet Alert Js Link -- -->
-        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-        <script type="text/javascript">
-            (function() {
-            emailjs.init('k0h_8PYoavkFEQWJN');
-            })();
-        </script>
-
       </div>
+      <!-- ---------Contact------- -->
+      <section id="Contact" class="ContactSection">
+        <h1 class="Contact">Contact Me</h1>
+        <div class="contact-form-container">
+          <form action="" class="contact-form" id="contact-form">
+            <input
+              type="text"
+              id="fullName"
+              placeholder="Your Name"
+              class="name"
+              required
+            />
+            <input
+              type="email"
+              name=""
+              id="email_id"
+              placeholder="Your Email"
+              class="email"
+              required
+            />
+            <textarea
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+              class="message"
+              required
+            ></textarea>
+            <button class="button" onclick="SendMail()">Send</button>
+          </form>
+        </div>
+      </section>
+      <!-- -----Footer------ -->
+      <section class="footer-container" id="footer">
+        <div class="cv">
+          <a href="James Smith_CV.pdf" download class="buttonCV">Download CV</a>
+        </div>
+        <div class="buttons-container">
+          <a
+            href="https://github.com/Jay7806"
+            target="_blank"
+            class="fa-brands fa-github"
+          >
+          </a>
+          <a
+            href="https://www.linkedin.com/in/james-smith-269850148"
+            target="_blank"
+            class="fa-brands fa-linkedin"
+          >
+          </a>
+        </div>
+        <p class="copywrite">Website Developed By James Smith</p>
+      </section>
     </div>
-  </body>
+    </body>
 </html>
 
-
-  <!-- <p><i class="fa-regular fa-paper-plane"></i>jay241093@gmail.com</p>
-          <p><i class="fa-solid fa-phone"></i>07496956755</p>
-                 <div class="buttons-container">
-                <a
-                  href="https://github.com/Jay7806"
-                  target="_blank"
-                  class="fa-brands fa-github"
-                >
-                                </a>
-                <a
-                  href="https://www.linkedin.com/in/james-smith-269850148"
-                  target="_blank"
-                  class="fa-brands fa-linkedin"
-                >
-                                </a>
-              </div>
-          <a href="James Smith_CV.pdf" download class="button buttonCV">Download CV</a> -->
