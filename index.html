@@ -14,11 +14,6 @@
     <title>JamesSmith</title>
     <script src="./index.js" defer></script>
     <script src="./particles.js" defer></script>
-    <!-- -- Email Js Link -- -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/ @emailjs/browser@3/dist/email.min.js"
-    ></script>
     <!-- -- Sweet Alert Js Link -- -->
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
@@ -44,13 +39,13 @@
             </a>
           </div>
           <div class="homepage-button-container">
-          <button
-            onclick="scrollToElement('#Projects')"
-            class="homepage-button"
-            role="button"
-          >
-            Click to see more
-          </button>
+            <button
+              onclick="scrollToElement('#Projects')"
+              class="homepage-button"
+              role="button"
+            >
+              Click to see more
+            </button>
           </div>
         </div>
       </section>
@@ -74,12 +69,16 @@
             <div class="NC-NEWS">
               <h2 class="text">NC-News</h2>
               <p class="text-project">
-                My NC-News project is a full-stack news app I built as my solo
-                project at Northcoders. This was originally two seperate
-                projects, a back-end API and a front-end web-app and then joined
-                together to create the NC-News website. It has comment, like,
-                delete and post functionality as well as being able to sort
-                articles and sign in as an existing user.
+                My NC-News project is a full-stack news application that I
+                developed during my time at Northcoders. Originally, it
+                consisted of two separate projects: a back-end API and a
+                front-end web application. These two components were integrated
+                to create the NC-News website. The NC-News website offers a
+                range of functionalities, including the ability to read and
+                comment on articles, like and delete comments, and post new
+                articles. Additionally, it provides features for sorting
+                articles based on various criteria and allows users to sign in
+                with existing accounts.
               </p>
               <h3 class="text">Tech Stack:</h3>
               <ol class="tech-stack">
@@ -105,22 +104,30 @@
                 >
                   <i class="fa-brands fa-github"></i> Front-end GitHub
                 </a>
+                <a
+                  href="https://james-news-bytes.netlify.app/"
+                  target="_blank"
+                  class="button"
+                >
+                  <i class="fa-solid fa-globe"></i> Hosted site
+                </a>
               </div>
             </div>
             <div class="Picture-this-place-container">
               <div class="Picture-this-place">
                 <h2 class="text">Picture This Place</h2>
                 <p class="text-project">
-                  This is a Full-stack group project. This App is a location
-                  based guessing game were a user will go out, take a picture of
-                  a building or monument and then post on the app and then
-                  another user will look on the app at near-by posted places and
-                  go and find the location of the picture, once they're at the
-                  location they can make and guess and based on the co-ordinates
-                  of the guess the app will give them a medal depening on how
-                  close to the location they are. if they're within 25m of the
-                  location they will recieve a gold medal, withing 50M will
-                  recieve silver and within 75m will recieve bronze.
+                  This is a full-stack group project, a location-based guessing
+                  game. In this app, a user captures an image of a building or
+                  monument, posts it on the app, and challenges other users to
+                  locate the pictured place. When a user is at the location,
+                  they can submit a guess based on coordinates, and the app
+                  awards medals based on their proximity to the actual location.
+                  Users who guess within 25 meters receive a gold medal, those
+                  within 50 meters get silver, and those within 75 meters earn a
+                  bronze medal. <br />
+                  This is a group project consisting of 5 individuals, we each
+                  had an equal involvement in designing and creating the app.
                 </p>
                 <h3 class="text">Tech Stack:</h3>
                 <ol class="tech-stack">
@@ -153,7 +160,13 @@
             </div>
             <div class="Portfolio-Website">
               <h2 class="text">Portfolio Website</h2>
-              <p class="text-project">This is my portfolio website...</p>
+              <p class="text-project">
+                This website is my personal portfolio, a platform I've crafted
+                to showcase my various projects and share information about
+                myself. Here, you can explore a collection of my work, dive into
+                my skills and experience, and get to know me better. It's a
+                virtual gateway to my journey as a developer and creator.
+              </p>
               <h3 class="text">Tech Stack:</h3>
               <ol class="tech-stack">
                 <li class="text">JavaScript</li>
@@ -177,15 +190,16 @@
         <section id="About" class="AboutSection">
           <h1 class="About">About</h1>
           <p class="intro">
-            Hi, I'm James Smith. I started to code by teaching myself in my
-            spare time, which led me to embark on a career change from working
-            as a telecommunications engineer to an aspiring Software Developer,
-            I took the leap by enrolling in the Northcoders Software Development
-            bootcamp. In this transformative journey, I honed my skills, learned
-            to tackle complex challenges, and embraced a growth mindset. Now,
-            I'm ready to contribute to the dynamic world of software
-            development, armed with a passion for innovation and a commitment to
-            pushing the boundaries of technology.
+            Hello, I'm James Smith. My journey into the world of coding began as
+            a self-taught endeavor during my spare time, which led me to embark
+            on a career change from working as a telecommunications engineer to
+            an aspiring Software Developer, I took the leap by enrolling in the
+            Northcoders Software Development bootcamp. In this transformative
+            journey, I sharpened my skills, learned to tackle complex
+            challenges, and embraced a growth mindset. Now, I'm ready to
+            contribute to the dynamic world of software development, armed with
+            a passion for innovation and a commitment to pushing the boundaries
+            of technology.
           </p>
           <img class="image" src="./js.jpg" />
           <ul class="tech">
@@ -230,9 +244,43 @@
               class="message"
               required
             ></textarea>
-            <button class="button" onclick="SendMail()">Send</button>
+            <button id="sendBtn" class="button" onclick="Send()">Send</button>
           </form>
         </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+          function Send() {
+
+            let name = document.getElementById("fullName").value;
+            let email = document.getElementById("email_id").value;
+            let message = document.getElementById("message").value;
+            let body = 'name: '+ name + '<br/> email: ' + email + '<br/> message: ' + message;
+console.log(body)
+            Email.send({
+              Host: "smtp.elasticemail.com",
+              Username: "jay241093@gmail.com",
+              Password: "51b08b94-6e9e-48ab-85c4-f502f32790f0",
+              To: "jay241093@gmail.com",
+              From: "jay241093@gmail.com",
+              Subject: "This is the subject",
+              Body: body,
+            }).then((message) => alert(message));
+          }
+
+          // let sendBtn = document.getElementById("sendBtn");
+          // sendBtn.addEventListener("click", function (e) {
+          //   e.preventDefault();
+
+
+          //   Email.send({
+          //     SecureToken: "51b08b94-6e9e-48ab-85c4-f502f32790f0",
+          //     To: "jay241093@gmail.com",
+          //     From: "jay241093@gmail.com",
+          //     Subject: "contact message",
+          //     Body: body
+          //   }).then((message) => alert(message));
+          // });
+        </script>
       </section>
       <!-- -----Footer------ -->
       <section class="footer-container" id="footer">
@@ -256,6 +304,5 @@
         <p class="copywrite">Website Developed By James Smith</p>
       </section>
     </div>
-    </body>
+  </body>
 </html>
-

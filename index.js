@@ -44,27 +44,27 @@ link4.addEventListener("click", (e) => {
 
 //Email
 
-function SendMail() {
-  (function () {
-    emailjs.init("k0h_8PYoavkFEQWJN");
-  })();
+// function SendMail() {
+//   (function () {
+//     emailjs.init("k0h_8PYoavkFEQWJN");
+//   })();
 
-  let params = {
-    from_name: document.querySelector("#fullName").value,
-    email_id: document.querySelector("#email_id").value,
-    message: document.querySelector("#message").value,
-  };
+//   let params = {
+//     from_name: document.querySelector("#fullName").value,
+//     email_id: document.querySelector("#email_id").value,
+//     message: document.querySelector("#message").value,
+//   };
 
-  let serviceId = "service_z3ltfad";
-  let templateId = "template_s9rmxzp";
+//   let serviceId = "service_z3ltfad";
+//   let templateId = "template_s9rmxzp";
 
-  emailjs
-    .send(serviceId, templateId, params)
-    .then((res) => {
-      alert("email sent");
-    })
-    .catch();
-}
+//   emailjs
+//     .send(serviceId, templateId, params)
+//     .then((res) => {
+//       alert("email sent");
+//     })
+//     .catch();
+// }
 
 // function validate() {
 //   let name = document.querySelector(".name");
