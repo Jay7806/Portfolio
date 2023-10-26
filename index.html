@@ -18,7 +18,6 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   </head>
   <body>
-    <canvas id="canvas1"></canvas>
     <div class="website-container">
       <!-- NAV -->
       <nav id="main-nav" class="nav">
@@ -32,35 +31,41 @@
         </ul>
       </nav>
       <!-- NAV -->
-      <section id="Header" class="Header">
-        <div>
-          <h1 id="HeaderHome" class="HeaderHome">James Smith</h1>
-          <h2 class="SubHeaderHome">Junior Software<br/> Developer</h2>
-          <div class="top-buttons">
-            <a
-              href="https://github.com/Jay7806"
-              target="_blank"
-              class="fa-brands fa-github"
-            >
-            </a>
-            <a
-              href="https://www.linkedin.com/in/james-smith-269850148"
-              target="_blank"
-              class="fa-brands fa-linkedin"
-            >
-            </a>
+      <div class="TopContainer">
+        <canvas id="canvas1"></canvas>
+        <section id="Header" class="Header">
+          <div>
+            <h1 id="HeaderHome" class="HeaderHome">James Smith</h1>
+            <h2 class="SubHeaderHome">
+              Junior Software<br />
+              Developer
+            </h2>
+            <div class="top-buttons">
+              <a
+                href="https://github.com/Jay7806"
+                target="_blank"
+                class="fa-brands fa-github"
+              >
+              </a>
+              <a
+                href="https://www.linkedin.com/in/james-smith-269850148"
+                target="_blank"
+                class="fa-brands fa-linkedin"
+              >
+              </a>
+            </div>
+            <div class="homepage-button-container">
+              <button
+                onclick="scrollToElement('#ProjectsContainer')"
+                class="homepage-button"
+                role="button"
+              >
+                Click to see more
+              </button>
+            </div>
           </div>
-          <div class="homepage-button-container">
-            <button
-              onclick="scrollToElement('#ProjectsContainer')"
-              class="homepage-button"
-              role="button"
-            >
-              Click to see more
-            </button>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
       <div id="ProjectsContainer" class="ProjectsContainer">
         <section id="ProjectsSection" class="ProjectsSection">
           <h1 id="Projects" class="Projects">Projects</h1>
@@ -111,49 +116,46 @@
               </a>
             </div>
           </div>
-          <div class="Picture-this-place-container">
-            <div class="Picture-this-place">
-              <h2 class="text">Picture This Place</h2>
-              <p class="text-project">
-                This is a full-stack group project, a location-based guessing
-                game. In this app, a user captures an image of a building or
-                monument, posts it on the app, and challenges other users to
-                locate the pictured place. When a user is at the location, they
-                can submit a guess based on coordinates, and the app awards
-                medals based on their proximity to the actual location. Users
-                who guess within 25 meters receive a gold medal, those within 50
-                meters get silver, and those within 75 meters earn a bronze
-                medal. <br />
-                This is a group project consisting of 5 individuals, we each had
-                an equal involvement in designing and creating the app.
-              </p>
-              <h3 class="text">Tech Stack:</h3>
-              <ol class="tech-stack">
-                <li class="text">JavaScript</li>
-                <li class="text">React Native</li>
-                <li class="text">Expo/ExpoGo</li>
-                <li class="text">MongoDB</li>
-                <li class="text">Mongoose</li>
-                <li class="text">Node.js</li>
-                <li class="text">Express.js</li>
-                <li class="text">Jest</li>
-              </ol>
-              <div class="buttons">
-                <a
-                  href="https://github.com/jcainuk/group-5-backend"
-                  target="_blank"
-                  class="button"
-                >
-                  <i class="fa-brands fa-github"></i> Back-end GitHub
-                </a>
-                <a
-                  href="https://github.com/Harrywg/group-5-frontend"
-                  target="_blank"
-                  class="button"
-                >
-                  <i class="fa-brands fa-github"></i> Front-end GitHub
-                </a>
-              </div>
+          <div class="Picture-this-place">
+            <h2 class="text">Picture This Place</h2>
+            <p class="text-project">
+              This is a full-stack group project, a location-based guessing
+              game. In this app, a user captures an image of a building or
+              monument, posts it on the app, and challenges other users to
+              locate the pictured place. When a user is at the location, they
+              can submit a guess based on coordinates, and the app awards medals
+              based on their proximity to the actual location. Users who guess
+              within 25 meters receive a gold medal, those within 50 meters get
+              silver, and those within 75 meters earn a bronze medal. <br />
+              This is a group project consisting of 5 individuals, we each had
+              an equal involvement in designing and creating the app.
+            </p>
+            <h3 class="text">Tech Stack:</h3>
+            <ol class="tech-stack">
+              <li class="text">JavaScript</li>
+              <li class="text">React Native</li>
+              <li class="text">Expo/ExpoGo</li>
+              <li class="text">MongoDB</li>
+              <li class="text">Mongoose</li>
+              <li class="text">Node.js</li>
+              <li class="text">Express.js</li>
+              <li class="text">Jest</li>
+            </ol>
+            <div class="buttons">
+              <a
+                href="https://github.com/jcainuk/group-5-backend"
+                target="_blank"
+                class="button"
+              >
+                <i class="fa-brands fa-github"></i> Back-end GitHub
+              </a>
+              <a
+                href="https://github.com/Harrywg/group-5-frontend"
+                target="_blank"
+                class="button"
+              >
+                <i class="fa-brands fa-github"></i> Front-end GitHub
+              </a>
             </div>
           </div>
           <div class="Portfolio-Website">
@@ -188,12 +190,12 @@
           <h1 class="About">About</h1>
           <p class="intro">
             Hello, I'm James Smith. My journey into the world of coding began as
-            a self-taught endeavor during my spare time, which led me to embark
+            a self-taught endeavor during my spare time. Which led me to embark
             on a career change from working as a telecommunications engineer to
-            an aspiring Software Developer, I took the leap by enrolling in the
-            Northcoders Software Development bootcamp. In this transformative
-            journey, I sharpened my skills, learned to tackle complex
-            challenges, and embraced a growth mindset. Now, I'm ready to
+            an aspiring Software Developer, I then took the leap by enrolling in
+            the Northcoders Software Development bootcamp. In this
+            transformative journey, I sharpened my skills, learned to tackle
+            complex challenges, and embraced a growth mindset. Now, I'm ready to
             contribute to the dynamic world of software development, armed with
             a passion for innovation and a commitment to pushing the boundaries
             of technology.
