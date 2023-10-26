@@ -7,18 +7,11 @@
   border: none;
   box-sizing: border-box;
 }
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
-
 body {
   display: flex;
   justify-content: center;
   background-color: rgb(6, 73, 82);
 }
-
 /* --------Home------- */
 .TopContainer {
   height: 100vh;
@@ -58,7 +51,6 @@ body {
   align-items: center;
   margin-top: 20px;
 }
-
 .top-buttons .fa-github,
 .top-buttons .fa-linkedin {
   text-decoration: none;
@@ -68,14 +60,11 @@ body {
   display: inline-block;
   transition: transform 0.5s;
 }
-
 .top-buttons a:hover {
   color: rgb(36, 148, 208);
   transform: translateY(-5px);
 }
-
 /* --------Navbar------- */
-
 #main-nav {
   background-color: #1e1e1e;
   padding: 11px;
@@ -113,11 +102,9 @@ body {
 .link a:hover::after {
   width: 100%;
 }
-
 /* --------Projects------- */
 .ProjectsContainer {
   position: relative;
-  /* border-top: solid 25px rgb(3, 51, 57); */
 }
 .ProjectsSection {
   background-color: rgb(6, 73, 82);
@@ -140,13 +127,11 @@ body {
   transform: scale(1);
   transition: transform 0.3s ease;
 }
-
 .NC-NEWS:hover,
 .Picture-this-place:hover,
 .Portfolio-Website:hover {
   transform: scale(1.05);
 }
-
 .Projects {
   text-align: center;
   margin-left: 150px;
@@ -172,11 +157,9 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
 /* --------About------- */
 .aboutContainer {
   position: relative;
-  /* top: 66rem; */
 }
 .AboutSection {
   display: flex;
@@ -191,7 +174,6 @@ body {
   border-top: solid 20px rgb(3, 51, 57);
   border-bottom: solid 20px rgb(3, 51, 57);
 }
-
 .About {
   text-align: center;
   font-family: Poppins;
@@ -215,8 +197,7 @@ body {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-} /* padding: 0; */
-
+}
 ul.tech {
   margin-top: 3rem;
   display: flex;
@@ -235,7 +216,6 @@ ul.tech {
   color: rgb(0, 0, 0);
   background-color: #ffffff;
 }
-
 /* --------Contact------- */
 .ContactSection {
   position: relative;
@@ -338,7 +318,6 @@ ul.tech {
   color: white;
 }
 /* --------Buttons------- */
-
 .homepage-button-container {
   display: flex;
   justify-content: center;
@@ -397,19 +376,15 @@ ul.tech {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
 .button:not(:disabled):hover {
   transform: scale(1.05);
 }
-
 .button:not(:disabled):hover:active {
   transform: scale(1.05) translateY(0.125rem);
 }
-
 .button:focus {
   outline: 0 solid transparent;
 }
-
 .button:focus:before {
   content: "";
   left: calc(-1 * 0.375rem);
@@ -419,19 +394,15 @@ ul.tech {
   transition: border-radius;
   user-select: none;
 }
-
 .button:focus:not(:focus-visible) {
   outline: 0 solid transparent;
 }
-
 .button:focus:not(:focus-visible):before {
   border-width: 0;
 }
-
 .button:not(:disabled):active {
   transform: translateY(0.125rem);
 }
-
 @media (max-width: 990px) {
   .website-container {
     margin: 0 auto;
@@ -555,15 +526,3 @@ ul.tech {
     gap: 1px;
   }
 }
-/* @media (max-width: 500px) {
-  .HeaderHome {
-    font-size: 40px;
-  }
-  .SubHeaderHome {
-    font-size: 20px;
-  }
-  .homepage-button {
-    font-size: 15px;
-    margin-right: 0px;
-  }
-} */
