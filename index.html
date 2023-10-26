@@ -20,10 +20,22 @@
   <body>
     <canvas id="canvas1"></canvas>
     <div class="website-container">
+      <!-- NAV -->
+      <nav id="main-nav" class="nav">
+        <ul class="nav-links">
+          <li id="link1" class="link"><a href="">Home</a></li>
+          <li id="link2" class="link">
+            <a href="#P">Projects</a>
+          </li>
+          <li id="link3" class="link"><a href="#A">About</a></li>
+          <li id="link4" class="link"><a href="#Contac">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- NAV -->
       <section id="Header" class="Header">
         <div>
           <h1 id="HeaderHome" class="HeaderHome">James Smith</h1>
-          <h2 class="SubHeaderHome">Junior Software Developer</h2>
+          <h2 class="SubHeaderHome">Junior Software<br/> Developer</h2>
           <div class="top-buttons">
             <a
               href="https://github.com/Jay7806"
@@ -40,7 +52,7 @@
           </div>
           <div class="homepage-button-container">
             <button
-              onclick="scrollToElement('#Projects')"
+              onclick="scrollToElement('#ProjectsContainer')"
               class="homepage-button"
               role="button"
             >
@@ -49,142 +61,127 @@
           </div>
         </div>
       </section>
-      <div class="ProjectsContainer">
-        <div class="Container">
-          <section class="ProjectsSection">
-            <!-- NAV -->
-            <nav id="main-nav">
-              <ul class="nav-links">
-                <li id="link1" class="link"><a href="">Home</a></li>
-                <li id="link2" class="link">
-                  <a href="#Projects">Projects</a>
-                </li>
-                <li id="link3" class="link"><a href="#About">About</a></li>
-                <li id="link4" class="link"><a href="#Contact">Contact</a></li>
-              </ul>
-            </nav>
-            <!-- NAV -->
-
-            <h1 id="Projects" class="Projects">Projects</h1>
-            <div class="NC-NEWS">
-              <h2 class="text">NC-News</h2>
+      <div id="ProjectsContainer" class="ProjectsContainer">
+        <section id="ProjectsSection" class="ProjectsSection">
+          <h1 id="Projects" class="Projects">Projects</h1>
+          <div class="NC-NEWS">
+            <h2 class="text">NC-News</h2>
+            <p class="text-project">
+              My NC-News project is a full-stack news application that I
+              developed during my time at Northcoders. Originally, it consisted
+              of two separate projects: a back-end API and a front-end web
+              application. These two components were integrated to create the
+              NC-News website. The NC-News website offers a range of
+              functionalities, including the ability to read and comment on
+              articles, like and delete comments, and post new articles.
+              Additionally, it provides features for sorting articles based on
+              various criteria and allows users to sign in with existing
+              accounts.
+            </p>
+            <h3 class="text">Tech Stack:</h3>
+            <ol class="tech-stack">
+              <li class="text">JavaScript</li>
+              <li class="text">React</li>
+              <li class="text">PostgreSQL</li>
+              <li class="text">Node.js</li>
+              <li class="text">Express.js</li>
+              <li class="text">Jest</li>
+            </ol>
+            <div class="buttons">
+              <a
+                href="https://github.com/Jay7806/js-be-project"
+                target="_blank"
+                class="button"
+              >
+                <i class="fa-brands fa-github"></i> Back-end GitHub
+              </a>
+              <a
+                href="https://github.com/Jay7806/js-fe-project"
+                target="_blank"
+                class="button"
+              >
+                <i class="fa-brands fa-github"></i> Front-end GitHub
+              </a>
+              <a
+                href="https://james-news-bytes.netlify.app/"
+                target="_blank"
+                class="button"
+              >
+                <i class="fa-solid fa-globe"></i> Hosted site
+              </a>
+            </div>
+          </div>
+          <div class="Picture-this-place-container">
+            <div class="Picture-this-place">
+              <h2 class="text">Picture This Place</h2>
               <p class="text-project">
-                My NC-News project is a full-stack news application that I
-                developed during my time at Northcoders. Originally, it
-                consisted of two separate projects: a back-end API and a
-                front-end web application. These two components were integrated
-                to create the NC-News website. The NC-News website offers a
-                range of functionalities, including the ability to read and
-                comment on articles, like and delete comments, and post new
-                articles. Additionally, it provides features for sorting
-                articles based on various criteria and allows users to sign in
-                with existing accounts.
+                This is a full-stack group project, a location-based guessing
+                game. In this app, a user captures an image of a building or
+                monument, posts it on the app, and challenges other users to
+                locate the pictured place. When a user is at the location, they
+                can submit a guess based on coordinates, and the app awards
+                medals based on their proximity to the actual location. Users
+                who guess within 25 meters receive a gold medal, those within 50
+                meters get silver, and those within 75 meters earn a bronze
+                medal. <br />
+                This is a group project consisting of 5 individuals, we each had
+                an equal involvement in designing and creating the app.
               </p>
               <h3 class="text">Tech Stack:</h3>
               <ol class="tech-stack">
                 <li class="text">JavaScript</li>
-                <li class="text">React</li>
-                <li class="text">PostgreSQL</li>
+                <li class="text">React Native</li>
+                <li class="text">Expo/ExpoGo</li>
+                <li class="text">MongoDB</li>
+                <li class="text">Mongoose</li>
                 <li class="text">Node.js</li>
                 <li class="text">Express.js</li>
                 <li class="text">Jest</li>
               </ol>
               <div class="buttons">
                 <a
-                  href="https://github.com/Jay7806/js-be-project"
+                  href="https://github.com/jcainuk/group-5-backend"
                   target="_blank"
                   class="button"
                 >
                   <i class="fa-brands fa-github"></i> Back-end GitHub
                 </a>
                 <a
-                  href="https://github.com/Jay7806/js-fe-project"
+                  href="https://github.com/Harrywg/group-5-frontend"
                   target="_blank"
                   class="button"
                 >
                   <i class="fa-brands fa-github"></i> Front-end GitHub
                 </a>
-                <a
-                  href="https://james-news-bytes.netlify.app/"
-                  target="_blank"
-                  class="button"
-                >
-                  <i class="fa-solid fa-globe"></i> Hosted site
-                </a>
               </div>
             </div>
-            <div class="Picture-this-place-container">
-              <div class="Picture-this-place">
-                <h2 class="text">Picture This Place</h2>
-                <p class="text-project">
-                  This is a full-stack group project, a location-based guessing
-                  game. In this app, a user captures an image of a building or
-                  monument, posts it on the app, and challenges other users to
-                  locate the pictured place. When a user is at the location,
-                  they can submit a guess based on coordinates, and the app
-                  awards medals based on their proximity to the actual location.
-                  Users who guess within 25 meters receive a gold medal, those
-                  within 50 meters get silver, and those within 75 meters earn a
-                  bronze medal. <br />
-                  This is a group project consisting of 5 individuals, we each
-                  had an equal involvement in designing and creating the app.
-                </p>
-                <h3 class="text">Tech Stack:</h3>
-                <ol class="tech-stack">
-                  <li class="text">JavaScript</li>
-                  <li class="text">React Native</li>
-                  <li class="text">Expo/ExpoGo</li>
-                  <li class="text">MongoDB</li>
-                  <li class="text">Mongoose</li>
-                  <li class="text">Node.js</li>
-                  <li class="text">Express.js</li>
-                  <li class="text">Jest</li>
-                </ol>
-                <div class="buttons">
-                  <a
-                    href="https://github.com/jcainuk/group-5-backend"
-                    target="_blank"
-                    class="button"
-                  >
-                    <i class="fa-brands fa-github"></i> Back-end GitHub
-                  </a>
-                  <a
-                    href="https://github.com/Harrywg/group-5-frontend"
-                    target="_blank"
-                    class="button"
-                  >
-                    <i class="fa-brands fa-github"></i> Front-end GitHub
-                  </a>
-                </div>
-              </div>
+          </div>
+          <div class="Portfolio-Website">
+            <h2 class="text">Portfolio Website</h2>
+            <p class="text-project">
+              This website is my personal portfolio, a platform I've crafted to
+              showcase my various projects and share information about myself.
+              Here, you can explore a collection of my work, dive into my skills
+              and experience, and get to know me better. It's a virtual gateway
+              to my journey as a developer and creator.
+            </p>
+            <h3 class="text">Tech Stack:</h3>
+            <ol class="tech-stack">
+              <li class="text">JavaScript</li>
+              <li class="text">HTML</li>
+              <li class="text">CSS</li>
+            </ol>
+            <div class="buttons">
+              <a
+                href="https://github.com/Jay7806/Portfolio"
+                target="_blank"
+                class="button"
+              >
+                <i class="fa-brands fa-github"></i>GitHub
+              </a>
             </div>
-            <div class="Portfolio-Website">
-              <h2 class="text">Portfolio Website</h2>
-              <p class="text-project">
-                This website is my personal portfolio, a platform I've crafted
-                to showcase my various projects and share information about
-                myself. Here, you can explore a collection of my work, dive into
-                my skills and experience, and get to know me better. It's a
-                virtual gateway to my journey as a developer and creator.
-              </p>
-              <h3 class="text">Tech Stack:</h3>
-              <ol class="tech-stack">
-                <li class="text">JavaScript</li>
-                <li class="text">HTML</li>
-                <li class="text">CSS</li>
-              </ol>
-              <div class="buttons">
-                <a
-                  href="https://github.com/Jay7806/Portfolio"
-                  target="_blank"
-                  class="button"
-                >
-                  <i class="fa-brands fa-github"></i>GitHub
-                </a>
-              </div>
-            </div>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
       <div class="aboutContainer">
         <section id="About" class="AboutSection">
@@ -220,9 +217,15 @@
       <section id="Contact" class="ContactSection">
         <h1 class="Contact">Contact Me</h1>
         <div class="contact-form-container">
-          <form action="" class="contact-form" id="contact-form">
+          <form
+            action="https://formspree.io/f/myyqodrq"
+            method="POST"
+            class="contact-form"
+            id="contact-form"
+          >
             <input
               type="text"
+              name="name"
               id="fullName"
               placeholder="Your Name"
               class="name"
@@ -230,7 +233,7 @@
             />
             <input
               type="email"
-              name=""
+              name="email"
               id="email_id"
               placeholder="Your Email"
               class="email"
@@ -242,45 +245,12 @@
               rows="10"
               placeholder="Your Message"
               class="message"
+              name="message"
               required
             ></textarea>
-            <button id="sendBtn" class="button" onclick="Send()">Send</button>
+            <button id="sendBtn" class="button" type="submit">Send</button>
           </form>
         </div>
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-          function Send() {
-
-            let name = document.getElementById("fullName").value;
-            let email = document.getElementById("email_id").value;
-            let message = document.getElementById("message").value;
-            let body = 'name: '+ name + '<br/> email: ' + email + '<br/> message: ' + message;
-console.log(body)
-            Email.send({
-              Host: "smtp.elasticemail.com",
-              Username: "jay241093@gmail.com",
-              Password: "51b08b94-6e9e-48ab-85c4-f502f32790f0",
-              To: "jay241093@gmail.com",
-              From: "jay241093@gmail.com",
-              Subject: "This is the subject",
-              Body: body,
-            }).then((message) => alert(message));
-          }
-
-          // let sendBtn = document.getElementById("sendBtn");
-          // sendBtn.addEventListener("click", function (e) {
-          //   e.preventDefault();
-
-
-          //   Email.send({
-          //     SecureToken: "51b08b94-6e9e-48ab-85c4-f502f32790f0",
-          //     To: "jay241093@gmail.com",
-          //     From: "jay241093@gmail.com",
-          //     Subject: "contact message",
-          //     Body: body
-          //   }).then((message) => alert(message));
-          // });
-        </script>
       </section>
       <!-- -----Footer------ -->
       <section class="footer-container" id="footer">
